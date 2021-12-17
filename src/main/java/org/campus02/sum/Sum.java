@@ -59,4 +59,13 @@ public class Sum {
         return n + recursiveSum(numbers);
     }
 
+    public int recursiveSumAcc(ArrayList<Integer> numbers, int acc){
+        // Abbruchbedingung
+        if (numbers.size() == 0)
+            return acc;
+
+        int n = numbers.remove(0);
+        acc += n; // addiere n zu unserem accumulator hinzu (acc = gleich wie sum vor der for-schleife)
+        return recursiveSumAcc(numbers, acc);
+    }
 }
