@@ -55,7 +55,7 @@ public class Sum {
         if (numbers.size() == 0)
             return 0;
 
-        int n = numbers.remove(0);
+        int n = numbers.remove(0); // gibt das Element an erster Stelle aus und entfernt es dann
         return n + recursiveSum(numbers);
     }
 
