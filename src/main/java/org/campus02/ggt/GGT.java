@@ -9,7 +9,25 @@ public class GGT {
      * @return größter gemeinsamer teiler
      */
     public int ggtIterative(int a, int b) {
-        return 0;
+        /*
+        int rest = 0;
+
+
+        while ((a % b) != 0){
+            rest = a % b;
+            a = b;
+            b = rest;
+        }
+
+        return rest;
+        */
+
+        while (b != 0){
+            int rest = a % b;
+            a = b;
+            b = rest;
+        }
+        return a;
     }
 
     /**
@@ -19,6 +37,9 @@ public class GGT {
      * @return größter gemeinsamer teiler
      */
     public int ggtRecursive(int a, int b) {
-        return 0;
+        if(b == 0)
+            return a;
+
+        return ggtRecursive(b, a % b);
     }
 }
