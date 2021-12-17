@@ -38,7 +38,11 @@ public class Sum {
      * @return Summe aller enthaltenen Zahlen
      */
     public int iterativeSum(ArrayList<Integer> numbers) {
-        return 0;
+        int sum = 0;
+        for (Integer number : numbers) {
+            sum += number;
+        }
+        return sum;
     }
 
     /**
@@ -47,7 +51,12 @@ public class Sum {
      * @return Summe aller enthaltenen Zahlen
      */
     public int recursiveSum(ArrayList<Integer> numbers) {
-        return 0;
+        // Abbruchsbedingung
+        if (numbers.size() == 0)
+            return 0;
+
+        int n = numbers.remove(0);
+        return n + recursiveSum(numbers);
     }
 
 }
