@@ -11,7 +11,11 @@ public class Sum {
      * @return summe
      */
     public int sumUpIterative(int n) {
-        return 0;
+        int sum = 0;
+        for (int i = 1; i <= n; i++){
+            sum = sum + i; // addition
+        }
+       return sum;
     }
 
     /**
@@ -21,7 +25,11 @@ public class Sum {
      * @return summe
      */
     public int sumUpRecursive(int n) {
-        return 0;
+        // Abbruchsbestimmung
+        if(n <= 0)
+            return n;
+        // selbst wieder aufrufen
+        return n + sumUpRecursive(n -1);
     }
 
     /**
